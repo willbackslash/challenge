@@ -39,3 +39,6 @@ def test_text_d():
     assert len(GooglonAnalyzer.get_subjunctive_verbs(TEXT_D)) == 19
     assert GooglonAnalyzer.get_vocabulary(TEXT_D) == TEXT_D_EXPECTED_VOCABULARY.split()
     assert len(set(GooglonAnalyzer.get_pretty_numbers(TEXT_D))) == 27
+
+def test_googlon_number():
+    assert GooglonAnalyzer.get_googlon_value("gxjrc") == 605637
